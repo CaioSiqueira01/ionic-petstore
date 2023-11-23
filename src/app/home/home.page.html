@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Petstore App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content>
+    <div class="btn-list">
+      <ion-button (click)="sortBy('id')">Ordenar por ID</ion-button>
+      <ion-button (click)="sortBy('type')">Ordenar por Tipo</ion-button>
+      <ion-button (click)="sortBy('price')">Ordenar por Preço</ion-button>
+    </div>
+    <ion-list>
+      <ion-card *ngFor="let pet of pets">
+        <ion-card-header>
+          ID: {{ pet.id }}
+        </ion-card-header>
+    
+        <ion-card-content>
+          <p>Tipo: {{ pet.type }}</p>
+          <p>Preço: {{ pet.price }}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </ion-content>
+</ion-content>
